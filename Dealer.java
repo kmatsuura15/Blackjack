@@ -1,11 +1,6 @@
-
-import java.util.ArrayList;
-import java.util.Scanner;
-
-public class BlackjackDriver {
-  
-  public static void main(String args[])
-  {
+public class Dealer
+{
+  public Dealer(){
    Card[] deck = new Card[52];
    deck[0] = new Card("Ace of Hearts", 1);
    deck[1] = new Card("Ace of Clovers", 1);
@@ -59,6 +54,16 @@ public class BlackjackDriver {
    deck[49] = new Card("King of Clovers", 10);
    deck[50] = new Card("King of Clubs", 10);
    deck[51] = new Card("King of Diamonds", 10);   
-            
   }
+  
+  public void Shuffle(Card[] ar)
+  {
+    for (int i = 0; i < ar.length; i++)
+    {
+     int index = (int)Math.random()*51;
+     Card a = ar[index];
+     ar[index] = ar[i];
+     ar[i] = a;
+    }
+  }  
 }

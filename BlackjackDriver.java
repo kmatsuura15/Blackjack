@@ -6,18 +6,11 @@ public class BlackjackDriver {
   
   public static void main(String args[])
   {
-    public class Card
-    {
-      private double mySuit;
-      private double myNumber;
-    }
+   int Psum = 0;
+   int Csum = 0;
+
     
-    public Card (String suit, int number) 
-    {
-      mySuit = suit;
-      myNumber = number;
-    }
-    
-    public String getSuit
-    {
-      
+   System.out.println(" Blackjack ");
+            
+  }
+}

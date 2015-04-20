@@ -1,69 +1,36 @@
 public class Dealer
 {
-  public Dealer(){
-   Card[] deck = new Card[52];
-   deck[0] = new Card("Ace of Hearts", 1);
-   deck[1] = new Card("Ace of Clovers", 1);
-   deck[2] = new Card("Ace of Clubs", 1);
-   deck[3] = new Card("Ace of Diamonds", 1);
-   deck[4] = new Card("2 of Hearts", 2);
-   deck[5] = new Card("2 of Clovers", 2);
-   deck[6] = new Card("2 of Clubs", 2);
-   deck[7] = new Card("2 of Diamonds", 2);
-   deck[8] = new Card("3 of Hearts", 3);
-   deck[9] = new Card("3 of Clovers", 3);
-   deck[10] = new Card("3 of Clubs", 3);
-   deck[11] = new Card("3 of Diamonds", 3);   
-   deck[12] = new Card("4 of Hearts", 4);
-   deck[13] = new Card("4 of Clovers", 4);
-   deck[14] = new Card("4 of Clubs", 4);
-   deck[15] = new Card("4 of Diamonds", 4);   
-   deck[16] = new Card("5 of Hearts", 5);
-   deck[17] = new Card("5 of Clovers", 5);
-   deck[18] = new Card("5 of Clubs", 5);
-   deck[19] = new Card("5 of Diamonds", 5);   
-   deck[20] = new Card("6 of Hearts", 6);
-   deck[21] = new Card("6 of Clovers", 6);
-   deck[22] = new Card("6 of Clubs", 6);
-   deck[23] = new Card("6 of Diamonds", 6);   
-   deck[24] = new Card("7 of Hearts", 7);
-   deck[25] = new Card("7 of Clovers", 7);
-   deck[26] = new Card("7 of Clubs", 7);
-   deck[27] = new Card("7 of Diamonds", 7);   
-   deck[28] = new Card("8 of Hearts", 8);
-   deck[29] = new Card("8 of Clovers", 8);
-   deck[30] = new Card("8 of Clubs", 8);
-   deck[31] = new Card("8 of Diamonds", 8);  
-   deck[32] = new Card("9 of Hearts", 9);
-   deck[33] = new Card("9 of Clovers", 9);
-   deck[34] = new Card("9 of Clubs", 9);
-   deck[35] = new Card("9 of Diamonds", 9);   
-   deck[36] = new Card("10 of Hearts", 10);
-   deck[37] = new Card("10 of Clovers", 10);
-   deck[38] = new Card("10 of Clubs", 10);
-   deck[39] = new Card("10 of Diamonds", 10);   
-   deck[40] = new Card("Jack of Hearts", 10);
-   deck[41] = new Card("Jack of Clovers", 10);
-   deck[42] = new Card("Jack of Clubs", 10);
-   deck[43] = new Card("Jack of Diamonds", 10);  
-   deck[44] = new Card("Queen of Hearts", 10);
-   deck[45] = new Card("Queen of Clovers", 10);
-   deck[46] = new Card("Queen of Clubs", 10);
-   deck[47] = new Card("Queen of Diamonds", 10); 
-   deck[48] = new Card("King of Hearts", 10);
-   deck[49] = new Card("King of Clovers", 10);
-   deck[50] = new Card("King of Clubs", 10);
-   deck[51] = new Card("King of Diamonds", 10);   
+  public Card[] getDeck(Card[] a)  
+  {
+   Card[] b = new Card[52];
+   for (int i = 0; i < a.length; i++)
+   {
+    b[i] = a[i];
+   }
+   return b;
   }
   
-  public void Shuffle(Card[] ar)
+  public static void shuffle(Card[] ar) //shuffles the cards
   {
     for (int i = 0; i < ar.length; i++)
     {
-     int index = (int)Math.random()*51;
+     int index = (int)(Math.random()*51)+0;
      Card a = ar[index];
      ar[index] = ar[i];
+   
      ar[i] = a;
+     
     }
   }  
-}
+  
+ /*deal method i dont use public Card[] getDeal(Card[] a)  
+  {
+    Card[] b = new Card[52];
+    for (int i = 0; i < 4; i++)
+    {
+
+      b[i] = a[i];
+    }
+    return b;
+  } */
+}  

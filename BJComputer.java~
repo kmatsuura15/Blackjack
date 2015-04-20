@@ -1,0 +1,9 @@
+public class BJComputer{
+ 
+ public int playCards()
+ {
+  return 1; 
+ }
+  
+}
+  

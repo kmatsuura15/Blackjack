@@ -1,7 +1,7 @@
-public class Card
+public class Card  
 {
-  private String mySuit;
-  private int myNumber;
+ private String mySuit;
+ private int myNumber;
  
     
  public Card (String suit, int number)
@@ -14,5 +14,10 @@ public class Card
  {
   return myNumber;
  }
+
  
+ public String getStr()
+ {
+  return mySuit;
+ }
 }

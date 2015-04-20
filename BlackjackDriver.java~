@@ -6,6 +6,11 @@ public class BlackjackDriver {
   
   public static void main(String args[])
   {
+   int playerSum = 0;
+   int computerSum = 0;
+   boolean move = true; 
+   int gameFinished = 0;
+   Card hand;
    Card[] deck = new Card[52];
    deck[0] = new Card("Ace of Hearts", 1);
    deck[1] = new Card("Ace of Clovers", 1);
@@ -58,7 +63,20 @@ public class BlackjackDriver {
    deck[48] = new Card("King of Hearts", 10);
    deck[49] = new Card("King of Clovers", 10);
    deck[50] = new Card("King of Clubs", 10);
-   deck[51] = new Card("King of Diamonds", 10);   
-            
+   deck[51] = new Card("King of Diamonds", 10);
+   
+   
+   Scanner in = new Scanner(System.in);
+
+   System.out.println(" Blackjack ");
+   Dealer.shuffle(deck); 
+   if (move == true)
+   {  
+   System.out.println(" Your cards are " + deck[0].getStr() + " and " + deck[1].getStr());
+   playerSum = deck[0].getNum() + deck[1].getNum();
+   System.out.println(" Sum: " + playerSum );
+   System.out.println(" Hit or Stand? " +  "press 1 to hit, 2 to stand. ");
+   if (
+   }
   }
 }
